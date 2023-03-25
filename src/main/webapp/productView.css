@@ -1,0 +1,119 @@
+.grid-container {
+    display: flex;
+    position: relative;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 10px;
+    column-gap: 15px;
+    row-gap: 10px;
+
+}
+.grid-item {
+    position: relative;
+    background-color: whitesmoke;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 1px;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: black;
+
+}
+.grid-item img {
+    object-fit: cover;
+    width: 100%;
+    display: flex;
+}
+
+.text {
+    text-align: center;
+}
+
+.movie-price {
+    opacity: 1;
+    position: absolute;
+    top: calc(.5vw + .2vh);
+    left: calc(.5vw + .2vh);
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: 700;
+    background: #FF4C4C;
+    opacity: 0.9;
+    direction: ltr;
+    line-height: 200%;
+    text-align: center;
+    border-radius: 5px
+}
+
+.movie-price em {
+    position: relative;
+    display: block;
+    font-style: normal;
+    font-size: 100%;
+}
+
+.basket {
+    opacity: 1;
+    position: absolute;
+    top: calc(.5vw + .2vh);
+    right: calc(.5vw + .2vh);
+    background: #4f4cff;
+    opacity: 0.9;
+    direction: ltr;
+    line-height: calc(1.5vw + .5vh);
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.basket em {
+    position: relative;
+    display: block;
+    padding: 10px;
+}
+
+.movie-title {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: 700;
+    background: black;
+    opacity: 0.9;
+    direction: ltr;
+    line-height: 300%;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+}
+
+.movie-title em {
+    position: relative;
+    font-style: normal;
+    font-size: 100%;
+    color: white;
+    font-weight: 500;
+}
+
+
+
+.grid-item:hover .movie-title {
+    display: inline-block;
+}
+
+.grid-item:hover .basket {
+    display: inline-block;
+}
+
+.fullClick {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0
+}
